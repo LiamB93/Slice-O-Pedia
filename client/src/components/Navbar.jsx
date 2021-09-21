@@ -6,9 +6,11 @@ function Navbar() {
     <nav>
       <Link to="/">Home</Link>
       <br />
-      <Link to="pizzerias">Pizzerias</Link>
+      <Link to="/pizzerias">Pizzerias</Link>
       <br />
       <Link to="/new">Add a Pizzeria</Link>
+      <br />
+      <Link to="review">Leave a Review</Link>
     </nav>
 
   )

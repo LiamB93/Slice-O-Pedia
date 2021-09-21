@@ -28,7 +28,7 @@ function NewPizzeria() {
     };
     const res = await axios.post(postURL, { fields }, config);
     console.log(res.data);
-    history.push("/");
+    history.push("/pizzerias");
 
   }
   return (

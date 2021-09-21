@@ -1,5 +1,6 @@
 import './App.css';
 import { Route } from "react-router-dom";
+// import React, { Component } from "react";
 import AllPizzerias from "./components/AllPizzerias";
 import NewPizzeria from './components/NewPizzeria';
 import Navbar from './components/Navbar';
@@ -12,12 +13,14 @@ function App() {
         <h1>Slice-o-Pedia</h1>
         <Navbar />
       </header>
-      <Route exact path="/pizzerias">
+
+      <Route path="/pizzerias">
         <AllPizzerias />
       </Route>
-      <Route>
+      <Route path="/new">
         <NewPizzeria />
       </Route>
+
     </div>
   );
 }
