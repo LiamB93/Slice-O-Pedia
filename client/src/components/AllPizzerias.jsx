@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const base = process.env.REACT_APP_AIRTABLE_BASE
 const key = process.env.REACT_APP_AIRTABLE_KEY
@@ -30,11 +30,12 @@ function AllPizzerias() {
 
       {pizzerias.map((pizzeria) => {
         return (
-          <div>
+          <Link to={`/pizzerias/${pizzeria.id}`} key={pizzeria.id}>
             <ol>
-              <li>{pizzeria.fields.name} {pizzeria.fields.location} {pizzeria.fields.rating}</li>
+              <li>{pizzeria.fields.name}</li>
             </ol>
-          </div>
+          </Link>
+
         );
       })}
 

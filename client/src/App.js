@@ -4,6 +4,8 @@ import { Route } from "react-router-dom";
 import AllPizzerias from "./components/AllPizzerias";
 import NewPizzeria from './components/NewPizzeria';
 import Navbar from './components/Navbar';
+import LeaveReview from './components/LeaveReview';
+import PizzeriaDetails from "./components/PizzeriaDetails"
 
 function App() {
   return (
@@ -19,6 +21,12 @@ function App() {
       </Route>
       <Route path="/new">
         <NewPizzeria />
+      </Route>
+      <Route path="/review">
+        <LeaveReview />
+      </Route>
+      <Route path="/pizzerias/:id">
+        <PizzeriaDetails />
       </Route>
 
     </div>

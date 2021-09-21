@@ -10,7 +10,7 @@ function Navbar() {
       <br />
       <Link to="/new">Add a Pizzeria</Link>
       <br />
-      <Link to="review">Leave a Review</Link>
+      <Link to="/review">Leave a Review</Link>
     </nav>
 
   )
