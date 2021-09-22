@@ -13,10 +13,10 @@ function App() {
   return (
 
     <div className="App">
-      <header>
-        <h1>Slice-o-Pedia</h1>
-        <Navbar />
-      </header>
+
+
+      <Navbar />
+
 
       <Route exact path="/pizzerias">
         <AllPizzerias pizzerias={pizzerias} setPizzerias={setPizzerias} />
