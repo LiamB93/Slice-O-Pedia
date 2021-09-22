@@ -11,14 +11,15 @@ const config = {
   }
 };
 
-function AllPizzerias() {
-  const [pizzerias, setPizzerias] = useState([]);
+function AllPizzerias(props) {
+  const { pizzerias, setPizzerias } = props
 
   useEffect(() => {
     async function fetchPizzeria() {
       try {
         const res = await axios.get(URL, config)
         setPizzerias(res.data.records);
+        console.log(res.data.records)
       } catch (error) {
         console.log(error);
       }
@@ -30,10 +31,10 @@ function AllPizzerias() {
 
       {pizzerias.map((pizzeria) => {
         return (
-          <Link to={`/pizzerias/${pizzeria.id}`} key={pizzeria.id}>
-            <ol>
+          <Link to={`/pizzerias/${pizzeria.fields.name}/review`} key={pizzeria.id}>
+            <ul>
               <li>{pizzeria.fields.name}</li>
-            </ol>
+            </ul>
           </Link>
 
         );
