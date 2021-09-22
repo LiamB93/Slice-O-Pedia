@@ -20,7 +20,7 @@ function LeaveReview(props) {
   const [rating, setRating] = useState(0);
   const [pizzeria, setPizzeria] = useState({});
   const { pizzerias } = props
-
+  const { id } = useParams();
   const history = useHistory();
   const { pizzeriaName, pizzeriaLocation } = useParams();
 
@@ -35,15 +35,14 @@ function LeaveReview(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const records = [
-      {
-        id: props.id,
-        fields: {
-          rating: rating
-        }
-      }
-    ]
-    await axios.patch(URL, { records }, config);
+    const fields =
+
+    {
+      rating: rating
+    }
+
+
+    await axios.patch(`${URL}/${pizzeria.id}`, { fields }, config);
     history.push(`/pizzerias`);
   }
   return (
@@ -55,8 +54,8 @@ function LeaveReview(props) {
         <label>Leave Review</label>
         <input
           type="number"
-          rating={rating}
-          setRating={setRating}
+          value={rating}
+          onChange={(e) => setRating(e.target.valueAsNumber)}
         />
         <br />
         <button>Submit</button>
