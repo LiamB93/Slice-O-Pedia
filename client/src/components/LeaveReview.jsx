@@ -49,7 +49,6 @@ function LeaveReview(props) {
     <div>
       <h1>Leave a Review!</h1>
       <h3> {pizzeriaName} </h3>
-      <h4> {pizzeriaLocation}</h4>
       <form onSubmit={handleSubmit}>
         <label>Leave Review</label>
         <input

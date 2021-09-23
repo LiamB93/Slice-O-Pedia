@@ -6,6 +6,7 @@ import AllPizzerias from "./components/AllPizzerias";
 import NewPizzeria from './components/NewPizzeria';
 import Navbar from './components/Navbar';
 import LeaveReview from './components/LeaveReview';
+import Home from "./components/Home";
 // import PizzeriaDetails from "./components/PizzeriaDetails"
 
 function App() {
@@ -17,14 +18,18 @@ function App() {
 
       <Navbar />
 
+      <Route path="/">
+        <Home className="fixed w-full h-full bg-no-repeat bg-cover" />
+
+      </Route>
 
       <Route exact path="/pizzerias">
         <AllPizzerias pizzerias={pizzerias} setPizzerias={setPizzerias} />
       </Route>
-      <Route path="/new">
+      <Route exact path="/new">
         <NewPizzeria />
       </Route>
-      <Route path="/pizzerias/:pizzeriaName/review">
+      <Route exact path="/pizzerias/:pizzeriaName/review">
         <LeaveReview pizzerias={pizzerias} />
       </Route>
       {/* <Route path="/pizzerias/:id">
