@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="flex justify-between items-center bg-red-600 w-screen h-48 space-x-10 font-bold text-3xl relative shadow-sm font-mono"
+    <nav className="flex justify-between items-center bg-red-600 w-screen h-48 space-x-10 font-bold text-3xl relative shadow-sm font-mono rounded-lg"
       role="navigation"
     >
       <h1 className="pl-8">Welcome to Slice-o-Pedia</h1>

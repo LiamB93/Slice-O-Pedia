@@ -46,9 +46,10 @@ function LeaveReview(props) {
     history.push(`/pizzerias`);
   }
   return (
-    <div>
+    <div className="font-mono text-3xl m-10">
       <h1>Leave a Review!</h1>
       <h3> {pizzeriaName} </h3>
+      <h4> {pizzeriaLocation}</h4>
       <form onSubmit={handleSubmit}>
         <label>Leave Review</label>
         <input
