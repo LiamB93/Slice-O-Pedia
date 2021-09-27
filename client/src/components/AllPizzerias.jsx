@@ -26,6 +26,7 @@ function AllPizzerias(props) {
       }
     }
     fetchPizzeria();
+    // eslint-disable-next-line
   }, []);
   return (
     <>

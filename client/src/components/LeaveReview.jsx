@@ -16,19 +16,18 @@ const config = {
 };
 
 function LeaveReview(props) {
-  const [location, setLocation] = useState("");
   const [rating, setRating] = useState(0);
   const [pizzeria, setPizzeria] = useState({});
   const { pizzerias } = props
   const history = useHistory();
-  const { pizzeriaName, pizzeriaLocation } = useParams();
+  const { pizzeriaName } = useParams();
 
   useEffect(() => {
     const pizzeria = pizzerias.find(pizzeria => pizzeria.fields.name === pizzeriaName)
-    const loc = pizzerias.find(loc => loc.fields.location === pizzeriaLocation)
     setPizzeria(pizzeria);
-    setLocation(loc);
 
+
+    // eslint-disable-next-line
   }, [])
 
 
