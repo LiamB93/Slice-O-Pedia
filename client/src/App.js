@@ -10,28 +10,28 @@ function App() {
   const [pizzerias, setPizzerias] = useState([]);
   return (
 
-    <div className="App main-container">
+    <div className="App">
 
 
       <Navbar />
-      {/* <div className="main-container"> */}
+      <div className="main-container">
 
 
 
 
-      <Route exact path="/pizzerias">
-        <AllPizzerias pizzerias={pizzerias} setPizzerias={setPizzerias} />
-      </Route>
-      <Route path="/new">
-        <NewPizzeria />
-      </Route>
-      <Route path="/pizzerias/:pizzeriaName/review">
-        <LeaveReview pizzerias={pizzerias} />
-      </Route>
+        <Route exact path="/pizzerias">
+          <AllPizzerias pizzerias={pizzerias} setPizzerias={setPizzerias} />
+        </Route>
+        <Route path="/new">
+          <NewPizzeria />
+        </Route>
+        <Route path="/pizzerias/:pizzeriaName/review">
+          <LeaveReview pizzerias={pizzerias} />
+        </Route>
+
+      </div>
 
     </div>
-
-    // </div>
   );
 }
 

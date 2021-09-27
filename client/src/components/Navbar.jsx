@@ -19,7 +19,7 @@ function Navbar() {
       </div>
       <div className="pr-8 md:block hidden">
         <Link className="p-4" to="/">Home</Link>
-        <Link className="p-4" to="/pizzerias">My Pizzeria</Link>
+        <Link className="p-4" to="/pizzerias">My Pizzerias</Link>
         <Link className="p-4" to="/new">Add a Pizzeria</Link>
       </div>
     </nav>
