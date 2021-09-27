@@ -2,7 +2,6 @@ import { useState } from "react";
 import axios from "axios";
 import Form from "./Form";
 import { useHistory } from "react-router";
-import background from "../images/background.png";
 
 const base = process.env.REACT_APP_AIRTABLE_BASE
 const key = process.env.REACT_APP_AIRTABLE_KEY
@@ -35,8 +34,8 @@ function NewPizzeria() {
   return (
 
     <div>
-      <h1 className="flex justify-center font-mono text-3xl m-10">Submit a Pizzeria!</h1>
-      <div className=" flex justify-center font-mono text-3xl m-10">
+      <h1 className="flex justify-center font-mono text-5xl m-10">Submit a Pizzeria!</h1>
+      <div className=" flex justify-center font-mono text-4xl m-10">
         <Form
           name={name}
           setName={setName}
@@ -45,7 +44,7 @@ function NewPizzeria() {
           rating={rating}
           setRating={setRating}
           handleSubmit={handleSubmit}
-          type={"submit"}
+          type={"Submit"}
         />
       </div>
     </div >

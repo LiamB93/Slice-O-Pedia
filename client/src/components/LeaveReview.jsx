@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import { useParams } from "react-router";
+import DeleteButton from "./DeleteButton";
 
 
 
@@ -15,12 +16,10 @@ const config = {
 };
 
 function LeaveReview(props) {
-  // const [name, setName] = useState("");
   const [location, setLocation] = useState("");
   const [rating, setRating] = useState(0);
   const [pizzeria, setPizzeria] = useState({});
   const { pizzerias } = props
-  const { id } = useParams();
   const history = useHistory();
   const { pizzeriaName, pizzeriaLocation } = useParams();
 
@@ -47,10 +46,9 @@ function LeaveReview(props) {
   }
   return (
     <div className="font-mono text-3xl m-10">
-      <h1>Leave a Review!</h1>
-      <h3> {pizzeriaName} </h3>
-      <h4> {pizzeriaLocation}</h4>
-      <form onSubmit={handleSubmit}>
+      <h1 className="flex justify-center text-4xl">Update your Review</h1>
+      <h3 className="flex justify-center text-5xl"> {pizzeriaName} </h3>
+      <form className="flex justify-center" onSubmit={handleSubmit}>
         <label>Leave Review</label>
         <input
           type="number"
@@ -58,10 +56,13 @@ function LeaveReview(props) {
           onChange={(e) => setRating(e.target.valueAsNumber)}
         />
         <br />
-        <button>Submit</button>
+        <button>Update</button>
       </form>
-
+      <div className="flex justify-center text-4xl">
+        <DeleteButton pizzeria={pizzeria} />
+      </div>
     </div>
+
   )
 }
 

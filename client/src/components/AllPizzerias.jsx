@@ -1,7 +1,7 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import background from "../images/background.png"
+
 
 const base = process.env.REACT_APP_AIRTABLE_BASE
 const key = process.env.REACT_APP_AIRTABLE_KEY
@@ -38,8 +38,8 @@ function AllPizzerias(props) {
       {pizzerias.map((pizzeria) => {
         return (
           <Link to={`/pizzerias/${pizzeria.fields.name}/review`} key={pizzeria.id}>
-            <ul className="font-mono text-3xl my-8">
-              <li className="flex justify-center space-x-12">
+            <ul className="font-mono text-5xl my-8">
+              <li className="lg:text-5xl md:text-4xl sm:text-3xl text-2xl flex justify-center space-x-12">
                 <h1>{pizzeria.fields.name}</h1>
                 <h1>{pizzeria.fields.location}</h1>
                 <h1>{pizzeria.fields.rating}</h1>

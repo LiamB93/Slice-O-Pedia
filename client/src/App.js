@@ -1,12 +1,10 @@
 import './App.css';
 import { Route } from "react-router-dom";
 import { useState } from "react";
-// import React, { Component } from "react";
 import AllPizzerias from "./components/AllPizzerias";
 import NewPizzeria from './components/NewPizzeria';
 import Navbar from './components/Navbar';
 import LeaveReview from './components/LeaveReview';
-// import PizzeriaDetails from "./components/PizzeriaDetails"
 
 function App() {
   const [pizzerias, setPizzerias] = useState([]);
@@ -30,9 +28,7 @@ function App() {
         <Route path="/pizzerias/:pizzeriaName/review">
           <LeaveReview pizzerias={pizzerias} />
         </Route>
-        {/* <Route path="/pizzerias/:id">
-        <PizzeriaDetails />
-      </Route> */}
+
       </div>
 
     </div>
